@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      data-default-icon="https://static.cdninstagram.com/rsrc.php/y4/r/QaBlI0OZiks.ico"
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="https://static.cdninstagram.com/rsrc.php/y4/r/QaBlI0OZiks.ico"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/style.min.css" />
+    <title>Instagram</title>
+  </head>
+  <body>
+    <main>
+      <section>
+        <div class="container">
+          <div class="wrapper">
+            <div class="left">
+              <div class="left__screenshot"></div>
+            </div>
+            <div class="right">
+              <div class="right__wrapper">
+                <img src="images/logo.svg" alt="" />
+                <div class="right__wrapper-form">
+                  <form action="" autocomplete="off" role="presentation">
+                    <div>
+                      <label>
+                        <span>Phone number, username, or email</span>
+                        <input
+                          type="text"
+                          id="formInp"
+                          value=""
+                          name=""
+                          id=""
+                          autocomplete="off"
+                        />
+                      </label>
+                    </div>
+                    <div>
+                      <label>
+                        <span>Password</span>
+                        <input
+                          type="password"
+                          id="formInp"
+                          value=""
+                          name=""
+                          id=""
+                          autocomplete="off"
+                          minlength="6"
+                        />
+                        <h5 id="togglePass" class="hidden">Show</h5>
+                      </label>
+                    </div>
+                    <button type="submit" id="submitForm" disabled>
+                      Log in
+                    </button>
+                  </form>
+                </div>
+                <div class="right__wrapper-separate">
+                  <span></span>
+                  <h1>OR</h1>
+                  <span></span>
+                </div>
+                <div class="right__wrapper-facebook">
+                  <p>
+                    <i class="fa-brands fa-square-facebook"></i>
+                    Log in with Facebook
+                  </p>
+                </div>
+                <p class="forgotPass">Forgot password?</p>
+              </div>
+              <div class="right__bottom">
+                <div class="right__bottom-reg">
+                  <p>Don't have an account? <a href="">Sign up</a></p>
+                </div>
+                <div class="right__bottom-getapp">
+                  <p>Get the app</p>
+                  <div class="app-links">
+                    <a
+                      href="https://apps.apple.com/us/app/instagram/id389801252"
+                      target="_blank"
+                    >
+                      <img src="images/iosapp.png" alt="" />
+                    </a>
+                    <a
+                      href="https://play.google.com/store/apps/details?id=com.instagram.android&hl=en&gl=US&pli=1"
+                      target="_blank"
+                    >
+                      <img src="images/androidapp.png" alt="" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="footer__wrapper">
+          <ul>
+            <li><a href="https://about.meta.com/">Meta</a></li>
+            <li><a href="https://about.instagram.com/">About</a></li>
+            <li><a href="https://about.instagram.com/blog">Blog</a></li>
+            <li>
+              <a href="https://about.instagram.com/about-us/careers">Jobs</a>
+            </li>
+            <li><a href="https://help.instagram.com/">Help</a></li>
+            <li>
+              <a href="https://developers.facebook.com/docs/instagram">API</a>
+            </li>
+            <li>
+              <a
+                href="https://privacycenter.instagram.com/policy/?entry_point=ig_help_center_data_policy_redirect"
+                >Privacy</a
+              >
+            </li>
+            <li>
+              <a href="https://help.instagram.com/581066165581870/">Terms</a>
+            </li>
+            <li>
+              <a
+                href="https://www.instagram.com/accounts/login/?next=%2Fdirectory%2Fprofiles%2F"
+                >Top Accounts</a
+              >
+            </li>
+            <li>
+              <a href="https://www.instagram.com/explore/locations/"
+                >Locations</a
+              >
+            </li>
+            <li>
+              <a href="https://www.instagram.com/web/lite/">Instagram Lite</a>
+            </li>
+            <li><a href="https://www.threads.net/">Threads</a></li>
+            <li>
+              <a href="https://www.facebook.com/help/instagram/261704639352628"
+                >Contact uploading & Non-Users</a
+              >
+            </li>
+            <li>
+              <a href="https://about.meta.com/technologies/meta-verified/"
+                >Meta Verified</a
+              >
+            </li>
+            <ul>
+              <li>English</li>
+              <li><p>© 2023 Instagram from Meta</p></li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script>
+      const formInp = document.querySelectorAll("#formInp");
+      const togglePass = document.getElementById("togglePass");
+      formInp.forEach((inp) => {
+        inp.addEventListener("keyup", () => {
+          if (inp.value === "") {
+            inp.parentElement.classList.remove("typed");
+            togglePass.style.display = "none";
+          } else {
+            inp.parentElement.classList.add("typed");
+            togglePass.style.display = "flex";
+          }
+          if (formInp[1].value.length >= 6 && formInp[0].value.length > 0) {
+            document.getElementById("submitForm").removeAttribute("disabled");
+          } else {
+            document
+              .getElementById("submitForm")
+              .setAttribute("disabled", true);
+          }
+        });
+      });
+      togglePass.addEventListener("click", () => {
+        if (togglePass.textContent === "Show") {
+          togglePass.textContent = "Hide";
+          document.querySelectorAll("#formInp")[1].type = "text";
+        } else {
+          document.querySelectorAll("#formInp")[1].type = "password";
+          togglePass.textContent = "Show";
+        }
+      });
+    </script>
+  </body>
+</html>

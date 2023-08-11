@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+li{
+    list-style: none;
+}
+input,
+button {
+    outline: none!important;
+    border: none;
+}
+.container{
+    max-width: 1440px;
+    padding-left: 50px;;
+    padding-right: 50px;
+    margin: 0 auto;
+    @media (max-width: 450px) {
+        padding: 5px;
+     }
+}
